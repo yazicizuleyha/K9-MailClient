@@ -1,6 +1,7 @@
 package com.fsck.k9.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -115,14 +116,23 @@ public class MessageWebView extends RigidWebView {
      *      The message body to display.  Assumed to be MIME type text/html.
      */
     public void setText(String text) {
+
      // Include a meta tag so the WebView will not use a fixed viewport width of 980 px
         String content = "<html><head><meta name=\"viewport\" content=\"width=device-width\"/>";
         if (K9.getK9MessageViewTheme() == K9.Theme.DARK)  {
             content += "<style type=\"text/css\">" +
-                   "* { background: black ! important; color: #F3F3F3 !important }" +
-                   ":link, :link * { color: #CCFF33 !important }" +
+                   "* { background: #323232 ! important; color: #F3F3F3 !important }" +
+                   ":link, :link * { color: #4caf50 !important }" +
                    ":visited, :visited * { color: #551A8B !important }</style> ";
         }
+
+        if (K9.getK9MessageViewTheme() == K9.Theme.LIGHT)  {
+            content += "<style type=\"text/css\">" +
+                    "* { background: white ! important; color: #F3F3F3 !important }" +
+                    ":link, :link * { color: #4caf50 !important }" +
+                    ":visited, :visited * { color: #551A8B !important }</style> ";
+        }
+
         content += HtmlConverter.cssStylePre();
         content += "</head><body>" + text + "</body></html>";
         loadDataWithBaseURL("about:blank", content, "text/html", "utf-8", null);
