@@ -24,7 +24,8 @@
 	        <com.fsck.k9.view.MessageWebView
 	            android:id="@+id/message_content"
 	            android:layout_height="wrap_content"
-	            android:layout_width="fill_parent"/>
+	            android:layout_width="fill_parent"
+				android:layout_margin="8dp" />
 	
 	        <!-- Attachments area -->
 	
@@ -32,27 +33,29 @@
 	            android:id="@+id/attachments_container"
 	            android:orientation="vertical"
 	            android:layout_width="fill_parent"
-	            android:layout_height="wrap_content">
+	            android:layout_height="wrap_content"
+				android:layout_margin="8dp">
 	
 	            <LinearLayout
 	                android:id="@+id/attachments"
 	                android:orientation="vertical"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:padding="4dip" />
+					android:layout_marginTop="8dp" />
 	
 	            <Button
 	                android:id="@+id/show_hidden_attachments"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:text="@string/message_view_show_more_attachments_action"/>
+	                android:text="@string/message_view_show_more_attachments_action"
+					android:layout_marginTop="8dp" />
 	
 	            <LinearLayout
 	                android:id="@+id/hidden_attachments"
 	                android:orientation="vertical"
 	                android:layout_width="fill_parent"
 	                android:layout_height="wrap_content"
-	                android:padding="4dip"/>
+					android:layout_marginTop="8dp" />
 	
 	        </LinearLayout>
 	        

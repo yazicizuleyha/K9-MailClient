@@ -227,7 +227,9 @@
                 android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
                 android:imeOptions="actionDone|flagNoEnterAction"
                 android:minLines="3"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
 
             <view
                 class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
@@ -238,7 +240,9 @@
                 android:minLines="0"
                 android:hint="@string/message_compose_signature_hint"
                 android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
 
             <Button
                 android:id="@+id/quoted_text_show"
@@ -253,7 +257,9 @@
             <RelativeLayout
                 android:id="@+id/quoted_text_bar"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp">
 
                 <view
                     class="com.fsck.k9.activity.MessageCompose$EolConvertingEditText"
@@ -275,7 +281,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_alignParentRight="true">
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="4dp">
 
                     <ImageButton
                         android:id="@+id/quoted_text_edit"
@@ -305,7 +312,9 @@
                 android:minLines="0"
                 android:hint="@string/message_compose_signature_hint"
                 android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp" />
 
         </LinearLayout>
 

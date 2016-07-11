@@ -14,6 +14,7 @@ import org.openintents.openpgp.util.OpenPgpUtils;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Vibrator;
@@ -25,10 +26,13 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.PreferenceScreen;
 import android.preference.RingtonePreference;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.fsck.k9.Account;
 import com.fsck.k9.Account.FolderMode;
 import com.fsck.k9.Account.QuoteStyle;
+import com.fsck.k9.ColorPicker;
 import com.fsck.k9.K9;
 import com.fsck.k9.NotificationSetting;
 import com.fsck.k9.Preferences;
@@ -193,6 +197,11 @@ public class AccountSettings extends K9PreferenceActivity {
     private ListPreference mSpamFolder;
     private ListPreference mTrashFolder;
     private CheckBoxPreference mAlwaysShowCcBcc;
+
+    private int selectedColorR;
+    private int selectedColorG;
+    private int selectedColorB;
+    private int selectedColorRGB;
 
 
     public static void actionSettings(Context context, Account account) {
@@ -911,24 +920,63 @@ public class AccountSettings extends K9PreferenceActivity {
 
         switch (id) {
             case DIALOG_COLOR_PICKER_ACCOUNT: {
-                dialog = new ColorPickerDialog(this,
-                        new ColorPickerDialog.OnColorChangedListener() {
-                            public void colorChanged(int color) {
-                                mAccount.setChipColor(color);
-                            }
-                        },
-                        mAccount.getChipColor());
+
+
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+
+                /* Show color picker dialog */
+                cp.show();
+
+    /* On Click listener for the dialog, when the user select the color */
+                Button okColor = (Button)cp.findViewById(R.id.okColorButton);
+                okColor.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                /* You can get single channel (value 0-255) */
+                        selectedColorR = cp.getRed();
+                        selectedColorG = cp.getGreen();
+                        selectedColorB = cp.getBlue();
+
+                /* Or the android RGB Color (see the android Color class reference) */
+                        selectedColorRGB = cp.getColor();
+                        mAccount.setChipColor(selectedColorRGB);
+                        mAccount.getChipColor();
+
+                        cp.dismiss();
+                    }
+                });
 
                 break;
             }
             case DIALOG_COLOR_PICKER_LED: {
-                dialog = new ColorPickerDialog(this,
-                        new ColorPickerDialog.OnColorChangedListener() {
-                            public void colorChanged(int color) {
-                                mAccount.getNotificationSetting().setLedColor(color);
-                            }
-                        },
-                        mAccount.getNotificationSetting().getLedColor());
+
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+
+                /* Show color picker dialog */
+                cp.show();
+
+    /* On Click listener for the dialog, when the user select the color */
+                Button okColor = (Button)cp.findViewById(R.id.okColorButton);
+                okColor.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+                /* You can get single channel (value 0-255) */
+                        selectedColorR = cp.getRed();
+                        selectedColorG = cp.getGreen();
+                        selectedColorB = cp.getBlue();
+
+                /* Or the android RGB Color (see the android Color class reference) */
+                        selectedColorRGB = cp.getColor();
+                        mAccount.getNotificationSetting().setLedColor(selectedColorRGB);
+                        mAccount.getNotificationSetting().getLedColor();
+
+                        cp.dismiss();
+                    }
+                });
 
                 break;
             }

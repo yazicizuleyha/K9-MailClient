@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+
+    <string name="materialcolorpicker__descLib">Material Color Picker Dialog</string>
+    <string name="materialcolorpicker__errHex" >Hex Code Format incorrect</string>
+    <string name="materialcolorpicker__inputColor">Color: </string>
+    <string name="materialcolorpicker__btnSelectColor">Select</string>
+
     <!-- === App-specific strings ============================================================= -->
 
     <!-- This should make it easier for forks to change the branding -->

@@ -128,7 +128,7 @@ public class MessageWebView extends RigidWebView {
 
         if (K9.getK9MessageViewTheme() == K9.Theme.LIGHT)  {
             content += "<style type=\"text/css\">" +
-                    "* { background: white ! important; color: #F3F3F3 !important }" +
+                    "* { background: #fafafa ! important; color: #000000 !important }" +
                     ":link, :link * { color: #4caf50 !important }" +
                     ":visited, :visited * { color: #551A8B !important }</style> ";
         }

@@ -17,17 +17,20 @@ import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.Preference.OnPreferenceClickListener;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.fsck.k9.ColorPicker;
 import com.fsck.k9.K9;
 import com.fsck.k9.K9.NotificationHideSubject;
 import com.fsck.k9.K9.NotificationQuickDelete;
 import com.fsck.k9.K9.SplitViewMode;
 import com.fsck.k9.Preferences;
 import com.fsck.k9.R;
-import com.fsck.k9.activity.ColorPickerDialog;
 import com.fsck.k9.activity.K9PreferenceActivity;
 import com.fsck.k9.controller.MessagingController;
 import com.fsck.k9.helper.FileBrowserHelper;
@@ -516,12 +519,36 @@ public class Prefs extends K9PreferenceActivity {
     }
 
     private void onChooseContactNameColor() {
-        new ColorPickerDialog(this, new ColorPickerDialog.OnColorChangedListener() {
-            public void colorChanged(int color) {
-                K9.setContactNameColor(color);
+
+        final ColorPicker cp = new ColorPicker(Prefs.this, 76, 175, 80);
+
+                /* Show color picker dialog */
+        cp.show();
+
+    /* On Click listener for the dialog, when the user select the color */
+        Button okColor = (Button)cp.findViewById(R.id.okColorButton);
+        okColor.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                final int selectedColorR;
+                final int selectedColorG;
+                final int selectedColorB;
+                final int selectedColorRGB;
+
+
+                /* You can get single channel (value 0-255) */
+                selectedColorR = cp.getRed();
+                selectedColorG = cp.getGreen();
+                selectedColorB = cp.getBlue();
+
+                /* Or the android RGB Color (see the android Color class reference) */
+                selectedColorRGB = cp.getColor();
+                K9.setContactNameColor(selectedColorRGB);
+
+                cp.dismiss();
             }
-        },
-        K9.getContactNameColor()).show();
+        });
     }
 
     @Override
