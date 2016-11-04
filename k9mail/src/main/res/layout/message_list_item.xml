@@ -39,19 +39,18 @@
 
     </LinearLayout>
 
-    <QuickContactBadge
+    <com.fsck.k9.RoundedQuickContactBadge
             android:id="@+id/contact_badge"
-            android:layout_marginRight="8dip"
+            android:layout_marginRight="12dip"
             android:layout_marginTop="4dip"
             android:layout_marginBottom="3dip"
-            android:layout_height="40dip"
-            android:layout_width="40dip"
+            android:layout_height="46dip"
+            android:layout_width="46dip"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="8dp"
+            android:layout_marginLeft="12dp"
             android:src="@drawable/ic_contact_picture"
             style="?android:attr/quickContactBadgeStyleWindowLarge"
             android:background="@android:color/transparent"/>
-
 
     <RelativeLayout
             android:id="@+id/list_item_inner"

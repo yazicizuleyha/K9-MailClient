@@ -51,12 +51,12 @@
                     android:orientation="vertical"
                     android:layout_margin="4dp">
 
-                    <QuickContactBadge
+                    <com.fsck.k9.RoundedQuickContactBadge
                         android:id="@+id/contact_badge"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginLeft="8dp" />
+                        android:layout_width="46dp"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginLeft="12dp" />
 
                     <!-- State icons -->
                     <LinearLayout
