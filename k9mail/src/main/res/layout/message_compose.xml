@@ -90,6 +90,7 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
+                android:background="?android:selectableItemBackground"
                 android:layout_marginLeft="8dip"
                 android:layout_marginRight="8dip"
                 android:id="@+id/quoted_text_show"
@@ -138,14 +139,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="8dip"
-                        android:background="@drawable/btn_edit" />
+                        android:background="@drawable/ic_pencil_grey" />
 
                     <ImageButton
                         android:id="@+id/quoted_text_delete"
                         android:contentDescription="@string/message_compose_description_delete_quoted_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/btn_dialog" />
+                        android:background="@drawable/ic_window_close_grey" />
 
                 </LinearLayout>
 
