@@ -7,7 +7,7 @@ import com.fsck.k9.mail.ServerSettings.Type;
 
 
 /**
- * Deals with logic surrounding account creation.
+ * Deals with logic surrounding account creation..
  * <p/>
  * TODO Move much of the code from com.fsck.k9.activity.setup.* into here
  */
