@@ -11,8 +11,8 @@
 
     <View
             android:id="@+id/chip"
-            android:layout_height="0dip"
-            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_width="8dip"
             android:background="#ff336699"
             android:layout_marginRight="8dip"
             />

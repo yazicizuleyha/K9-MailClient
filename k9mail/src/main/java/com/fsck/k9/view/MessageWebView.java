@@ -17,10 +17,7 @@ import android.widget.Toast;
 import com.fsck.k9.K9;
 import com.fsck.k9.K9.Theme;
 import com.fsck.k9.R;
-import com.fsck.k9.helper.HtmlConverter;
 import com.fsck.k9.mailstore.AttachmentResolver;
-
-import static android.R.attr.content;
 
 
 public class MessageWebView extends RigidWebView {
@@ -68,7 +65,7 @@ public class MessageWebView extends RigidWebView {
         if (K9.getK9MessageViewTheme() == Theme.DARK) {
             // Black theme should get a black webview background
             // we'll set the background of the messages on load
-            this.setBackgroundColor(0xffeeeeee);
+            this.setBackgroundColor(0xffffffff);
         }
 
         final WebSettings webSettings = this.getSettings();

@@ -51,7 +51,7 @@ public class AccountSettings {
                         R.array.account_settings_check_frequency_values))
             ));
         s.put("chipColor", Settings.versions(
-                new V(1, new ColorSetting(0xFF4caf50))
+                new V(1, new ColorSetting(0xFF0000FF))
             ));
         s.put("cryptoApp", Settings.versions(
                 new V(1, new StringSetting("apg")),
@@ -99,7 +99,7 @@ public class AccountSettings {
                 new V(1, new BooleanSetting(true))
             ));
         s.put("ledColor", Settings.versions(
-                new V(1, new ColorSetting(0xFF4caf50))
+                new V(1, new ColorSetting(0xFF0000FF))
             ));
         s.put("localStorageProvider", Settings.versions(
                 new V(1, new StorageProviderSetting())
