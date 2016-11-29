@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
                 android:maxLines="1"
-                android:textColor="@android:color/text_actionbar"
+                android:textColor="@color/text_actionbar"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
         </LinearLayout>
 
