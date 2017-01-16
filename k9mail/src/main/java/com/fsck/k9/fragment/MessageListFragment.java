@@ -1671,9 +1671,10 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
 
         MessageListAdapter() {
             super(getActivity(), null, 0);
-            mAttachmentIcon = getResources().getDrawable(R.drawable.ic_email_attachment_small);
-            mAnsweredIcon = getResources().getDrawable(R.drawable.ic_email_answered_small);
-            mForwardedIcon = getResources().getDrawable(R.drawable.ic_email_forwarded_small);
+            mAttachmentIcon = getResources().getDrawable(R.drawable.ic_attachment_grey
+            );
+            mAnsweredIcon = getResources().getDrawable(R.drawable.ic_subdirectory_arrow_left);
+            mForwardedIcon = getResources().getDrawable(R.drawable.ic_subdirectory_arrow_right);
             mForwardedAnsweredIcon = getResources().getDrawable(R.drawable.ic_email_forwarded_answered_small);
         }
 
