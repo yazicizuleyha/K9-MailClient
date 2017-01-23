@@ -1675,7 +1675,7 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
             );
             mAnsweredIcon = getResources().getDrawable(R.drawable.ic_subdirectory_arrow_left);
             mForwardedIcon = getResources().getDrawable(R.drawable.ic_subdirectory_arrow_right);
-            mForwardedAnsweredIcon = getResources().getDrawable(R.drawable.ic_email_forwarded_answered_small);
+            mForwardedAnsweredIcon = getResources().getDrawable(R.drawable.swap_horizontal);
         }
 
         private String recipientSigil(boolean toMe, boolean ccMe) {
@@ -3482,7 +3482,11 @@ public class MessageListFragment extends Fragment implements OnItemClickListener
     }
 
     public void confirmMarkAllAsRead() {
-        showDialog(R.id.dialog_confirm_mark_all_as_read);
+        if (K9.confirmMarkAllRead()) {
+            showDialog(R.id.dialog_confirm_mark_all_as_read);
+        } else {
+            markAllAsRead();
+        }
     }
 
     public void markAllAsRead() {
