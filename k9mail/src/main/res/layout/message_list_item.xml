@@ -10,7 +10,7 @@
         android:id="@+id/chip"
         android:adjustViewBounds="false"
         android:layout_height="match_parent"
-        android:layout_width="0dip"
+        android:layout_width="3dip"
         android:layout_marginRight="0dp"
         />
 

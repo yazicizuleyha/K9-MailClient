@@ -75,6 +75,7 @@ import com.fsck.k9.helper.IdentityHelper;
 import com.fsck.k9.helper.MailTo;
 import com.fsck.k9.helper.ReplyToParser;
 import com.fsck.k9.helper.SimpleTextWatcher;
+import com.fsck.k9.helper.Utility;
 import com.fsck.k9.mail.Address;
 import com.fsck.k9.mail.Flag;
 import com.fsck.k9.mail.Message;
@@ -337,7 +338,8 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         final Intent intent = getIntent();
 
-        mMessageReference = intent.getParcelableExtra(EXTRA_MESSAGE_REFERENCE);
+        String messageReferenceString = intent.getStringExtra(EXTRA_MESSAGE_REFERENCE);
+        mMessageReference = MessageReference.parse(messageReferenceString);
 
         final String accountUuid = (mMessageReference != null) ?
                                    mMessageReference.getAccountUuid() :
@@ -736,7 +738,7 @@ public class MessageCompose extends K9Activity implements OnClickListener,
             builder = SimpleMessageBuilder.newInstance();
         }
 
-        builder.setSubject(mSubjectView.getText().toString())
+        builder.setSubject(Utility.stripNewLines(mSubjectView.getText().toString()))
                 .setSentDate(new Date())
                 .setHideTimeZone(K9.hideTimeZone())
                 .setTo(recipientPresenter.getToAddresses())
@@ -1344,18 +1346,16 @@ public class MessageCompose extends K9Activity implements OnClickListener,
 
         if (k9identity.containsKey(IdentityField.ORIGINAL_MESSAGE)) {
             mMessageReference = null;
-            try {
-                String originalMessage = k9identity.get(IdentityField.ORIGINAL_MESSAGE);
-                MessageReference messageReference = new MessageReference(originalMessage);
+            String originalMessage = k9identity.get(IdentityField.ORIGINAL_MESSAGE);
+            MessageReference messageReference = MessageReference.parse(originalMessage);
 
+            if (messageReference != null) {
                 // Check if this is a valid account in our database
                 Preferences prefs = Preferences.getPreferences(getApplicationContext());
                 Account account = prefs.getAccount(messageReference.getAccountUuid());
                 if (account != null) {
                     mMessageReference = messageReference;
                 }
-            } catch (MessagingException e) {
-                Log.e(K9.LOG_TAG, "Could not decode message reference in identity.", e);
             }
         }
 
