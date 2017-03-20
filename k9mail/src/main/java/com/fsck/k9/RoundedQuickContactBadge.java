@@ -6,8 +6,6 @@ import android.graphics.Path;
 import android.util.AttributeSet;
 import android.widget.QuickContactBadge;
 
-import com.fsck.k9.R;
-
 import java.lang.reflect.Field;
 
 /**
