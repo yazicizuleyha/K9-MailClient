@@ -3,7 +3,7 @@
     <color name="message_list_item_footer_background">#eeeeee</color>
 
     <color name="colorPrimary">#e57373</color>
-    <color name="colorPrimaryDark">#e57373</color>
+    <color name="colorPrimaryDark">#db5454</color>
     <color name="colorAccent">#e57373</color>
 
     <color name="colorPrimary_dark">#f44336</color>

@@ -8,6 +8,9 @@ message_compose_recipients
 message_compose_attachment
 helper html_converter
 
+drawable:
+rounded_corners
+
 MessageWebView
 MessageListFragment
 

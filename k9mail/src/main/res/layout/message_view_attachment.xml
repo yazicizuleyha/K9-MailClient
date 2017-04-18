@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:padding="4dip">
         <RelativeLayout
-            android:background="#45bdbdbd"
+            android:background="@drawable/rounded_corners"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_margin="4dp"
