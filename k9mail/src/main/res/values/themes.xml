@@ -54,12 +54,12 @@
 
         <item name="textColorPrimaryRecipientDropdown">@android:color/primary_text_light</item>
         <item name="textColorSecondaryRecipientDropdown">@android:color/secondary_text_light</item>
-        <item name="messageListSelectedBackgroundColor">#804caf50</item>
+        <item name="messageListSelectedBackgroundColor">#80e57373</item>
         <item name="messageListReadItemBackgroundColor">#ffffff</item>
         <item name="messageListUnreadItemBackgroundColor">#eeeeee</item>
         <item name="messageListThreadCountForegroundColor">#ffffff</item>
         <item name="messageListThreadCountBackground">#9e9e9e</item>
-        <item name="messageListActiveItemBackgroundColor">#ff4caf50</item>
+        <item name="messageListActiveItemBackgroundColor">#ffe57373</item>
         <item name="messageListDividerColor">#ffcccccc</item>
         <item name="messageListCheckbox">@drawable/btn_check_message_list_light</item>
         <item name="messageViewAttachmentBackground">@drawable/attachment_text_box_light</item>
@@ -125,12 +125,12 @@
 
         <item name="textColorPrimaryRecipientDropdown">@android:color/primary_text_dark</item>
         <item name="textColorSecondaryRecipientDropdown">@android:color/secondary_text_dark</item>
-        <item name="messageListSelectedBackgroundColor">#804caf50</item>
+        <item name="messageListSelectedBackgroundColor">#80e57373</item>
         <item name="messageListReadItemBackgroundColor">#00000000</item>
         <item name="messageListUnreadItemBackgroundColor">#c05a5a5a</item>
         <item name="messageListThreadCountForegroundColor">@android:color/primary_text_dark</item>
         <item name="messageListThreadCountBackground">#9e9e9e</item>
-        <item name="messageListActiveItemBackgroundColor">#ff4caf50</item>
+        <item name="messageListActiveItemBackgroundColor">#ffe57373</item>
         <item name="messageListDividerColor">#ff333333</item>
         <item name="messageListCheckbox">@drawable/btn_check_message_list_dark</item>
         <item name="messageViewAttachmentBackground">@drawable/attachment_text_box_dark</item>

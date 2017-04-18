@@ -1341,14 +1341,14 @@ public class HtmlConverter {
         if (K9.getK9MessageViewTheme() == K9.Theme.DARK)  {
             return "<style type=\"text/css\">" +
                     "* { background: #323232 ! important; color: #F3F3F3 !important }" +
-                    ":link, :link * { color: #4caf50 !important }" +
-                    ":visited, :visited * { color: #551A8B !important }</style> ";
+                    ":link, :link * { color: #e57373 !important }" +
+                    ":visited, :visited * { color: #e57373 !important }</style> ";
 
         }else if (K9.getK9MessageViewTheme() == K9.Theme.LIGHT)  {
             return "<style type=\"text/css\">" +
                     "* { background: #ffffff ! important; color: #000000 !important }" +
-                    ":link, :link * { color: #4caf50 !important }" +
-                    ":visited, :visited * { color: #551A8B !important }</style> ";
+                    ":link, :link * { color: #e57373 !important }" +
+                    ":visited, :visited * { color: #e57373 !important }</style> ";
 
         } else {
             return "";

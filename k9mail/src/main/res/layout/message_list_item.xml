@@ -10,9 +10,7 @@
         android:id="@+id/chip"
         android:adjustViewBounds="false"
         android:layout_height="match_parent"
-        android:layout_width="3dip"
-        android:layout_marginRight="0dp"
-        />
+        android:layout_width="3dip" />
 
     <LinearLayout
         android:id="@+id/selected_checkbox_wrapper"
@@ -41,7 +39,6 @@
 
     <com.fsck.k9.RoundedQuickContactBadge
         android:id="@+id/contact_badge"
-        android:layout_marginRight="12dip"
         android:layout_marginTop="4dip"
         android:layout_marginBottom="3dip"
         android:layout_height="46dip"
@@ -56,6 +53,7 @@
         android:id="@+id/list_item_inner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="12dp"
         android:paddingTop="5dip"
         android:clickable="false"
         android:focusable="false"
@@ -83,6 +81,7 @@
 
         <LinearLayout
             android:id="@+id/subject_wrapper"
+            android:layout_marginEnd="12dp"
             android:layout_centerInParent="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -97,10 +96,13 @@
                 android:layout_height="wrap_content"
                 android:layout_width="0dp"
                 android:layout_weight="0.3"
+                android:layout_marginEnd="12dp"
                 android:ellipsize="end"
                 android:singleLine="true"
                 android:layout_marginBottom="1dip"
                 android:layout_marginLeft="1dip"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="?android:attr/textColorPrimary"
                 />
@@ -113,8 +115,10 @@
                 android:layout_marginBottom="1dip"
                 android:layout_marginLeft="1dip"
                 android:ellipsize="marquee"
+                android:fontFamily="sans-serif-condensed"
+                android:textStyle="bold"
                 android:singleLine="true"
-                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textColor="?android:attr/textColorPrimary"
                 />
 
@@ -134,7 +138,6 @@
 
         <CheckBox
             android:id="@+id/flagged_center_right"
-            style="?android:attr/starStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -162,7 +165,6 @@
 
         <CheckBox
             android:id="@+id/flagged_bottom_right"
-            style="?android:attr/starStyle"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
             android:layout_below="@+id/date"

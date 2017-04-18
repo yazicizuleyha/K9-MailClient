@@ -148,8 +148,8 @@ public class Prefs extends K9PreferenceActivity {
 
     private CheckBoxPreference mQuietTimeEnabled;
     private CheckBoxPreference mDisableNotificationDuringQuietTime;
-    private com.fsck.k9.preferences.TimePickerPreference mQuietTimeStarts;
-    private com.fsck.k9.preferences.TimePickerPreference mQuietTimeEnds;
+    private TimePickerPreference mQuietTimeStarts;
+    private TimePickerPreference mQuietTimeEnds;
     private ListPreference mNotificationQuickDelete;
     private ListPreference mLockScreenNotificationVisibility;
     private Preference mAttachmentPathPreference;
@@ -194,7 +194,7 @@ public class Prefs extends K9PreferenceActivity {
                 themeIdToName(K9.getK9ComposerThemeSetting()));
 
         findPreference(PREFERENCE_FONT_SIZE).setOnPreferenceClickListener(
-        new Preference.OnPreferenceClickListener() {
+        new OnPreferenceClickListener() {
             public boolean onPreferenceClick(Preference preference) {
                 onFontSizeSettings();
                 return true;

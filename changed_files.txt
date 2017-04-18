@@ -11,7 +11,7 @@ helper html_converter
 MessageWebView
 MessageListFragment
 
-settup acountsettings
+setup accountsettings
 setup prefs
 
 icons:
