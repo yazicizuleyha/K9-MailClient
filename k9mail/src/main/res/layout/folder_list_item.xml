@@ -5,7 +5,8 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:minHeight="?android:attr/listPreferredItemHeight"
-        android:paddingRight="4dip"
+        android:layout_marginBottom="136dp"
+        android:layout_marginTop="136dp"
         android:orientation="horizontal"
         android:gravity="center_vertical">
 
@@ -24,8 +25,8 @@
             android:layout_weight="1"
             android:orientation="vertical"
             android:gravity="center_vertical"
-            android:paddingBottom="2dip"
-
+            android:paddingTop="12dip"
+            android:paddingBottom="12dip"
             android:paddingLeft="6dip">
 
         <TextView

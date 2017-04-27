@@ -1,5 +1,6 @@
 themes
 custom_actionbar
+actionbar_indeterminate_progress_actionview
 message_list_item
 message_view_header
 message_view_attachment
@@ -7,6 +8,9 @@ message_compose
 message_compose_recipients
 message_compose_attachment
 helper html_converter
+
+folder_list_item
+accounts_item
 
 drawable:
 rounded_corners

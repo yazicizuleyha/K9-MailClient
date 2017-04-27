@@ -26,5 +26,6 @@
     <ProgressBar android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_gravity="center"
+        android:theme="@style/RefreshAccent"
         style="?android:attr/indeterminateProgressStyle" />
 </FrameLayout>

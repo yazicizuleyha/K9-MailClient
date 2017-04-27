@@ -70,5 +70,9 @@
         <item name="android:tint">?attr/tintColorBulletPointNegative</item>
     </style>
 
+    <style name="RefreshAccent" parent="android:Theme.Material">
+        <item name="android:colorAccent">#fafafa</item>
+    </style>
+
 </resources>
 

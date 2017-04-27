@@ -24,7 +24,7 @@
         android:layout_marginRight="4dip"
         android:paddingLeft="36dip"
         android:gravity="center_vertical"
-        android:background="#45bdbdbd"
+        android:background="@drawable/rounded_corners"
         android:orientation="horizontal">
 
         <TextView
