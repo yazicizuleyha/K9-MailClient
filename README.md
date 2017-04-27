@@ -1,6 +1,6 @@
 # K9-Material
 
-K9-Material is a fork of K-9 Mail, a open-source email client for Android, adding Material design..
+K9-Material is a fork of K-9 Mail, an open-source email client for Android, adding Material design..
 
 
 ## Download
