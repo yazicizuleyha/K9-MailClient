@@ -547,7 +547,7 @@ public class Prefs extends K9PreferenceActivity {
     }
 
     private void onChooseContactNameColor() {
-        final ColorPicker cp = new ColorPicker(Prefs.this, 76, 175, 80);
+        final ColorPicker cp = new ColorPicker(Prefs.this, 33, 150, 243);
 
                 /* Show color picker dialog */
         cp.show();

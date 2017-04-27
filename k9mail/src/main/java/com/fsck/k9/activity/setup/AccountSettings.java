@@ -941,7 +941,7 @@ public class AccountSettings extends K9PreferenceActivity {
         switch (id) {
             case DIALOG_COLOR_PICKER_ACCOUNT: {
 
-                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 33, 150, 243);
 
                 /* Show color picker dialog */
                 cp.show();
@@ -969,7 +969,7 @@ public class AccountSettings extends K9PreferenceActivity {
                 break;
             }
             case DIALOG_COLOR_PICKER_LED: {
-                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 33, 150, 243);
 
                 /* Show color picker dialog */
                 cp.show();
@@ -1007,7 +1007,7 @@ public class AccountSettings extends K9PreferenceActivity {
         switch (id) {
             case DIALOG_COLOR_PICKER_ACCOUNT: {
 
-                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 33, 150, 243);
 
                 /* Show color picker dialog */
                 cp.show();
@@ -1035,7 +1035,7 @@ public class AccountSettings extends K9PreferenceActivity {
                 break;
             }
             case DIALOG_COLOR_PICKER_LED: {
-                final ColorPicker cp = new ColorPicker(AccountSettings.this, 76, 175, 80);
+                final ColorPicker cp = new ColorPicker(AccountSettings.this, 33, 150, 243);
 
                 /* Show color picker dialog */
                 cp.show();
