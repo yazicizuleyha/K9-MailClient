@@ -21,6 +21,8 @@ MessageListFragment
 setup accountsettings
 setup prefs
 
+Account
+
 icons:
 
 messagelistfragment
