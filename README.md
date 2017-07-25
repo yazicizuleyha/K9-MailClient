@@ -7,7 +7,7 @@ K9-Material is a fork of K-9 Mail, an open-source email client for Android, addi
 
 K9-Material can be downloaded from a couple of sources:
 
-- Google Play: soon
+- [Google Play](https://play.google.com/store/apps/details?id=com.fsck.k9.material)
 - [F-Droid](https://f-droid.org/repository/browse/?fdid=com.fsck.k9.material)
 
 
