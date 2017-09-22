@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PowerManager;
+import android.support.v4.content.ContextCompat;
 import android.text.TextUtils.TruncateAt;
 import android.text.format.DateUtils;
 import android.util.Log;
