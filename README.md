@@ -1,4 +1,6 @@
-# K9-Material
+# K9-Material (Discontinued)
+
+### Since I don't have the time too support this project, I disabled the issue tracker. At the moment I will not longer support or update this project.
 
 K9-Material is a fork of K-9 Mail, an open-source email client for Android, adding Material design..
 
