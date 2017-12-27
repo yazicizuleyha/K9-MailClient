@@ -51,8 +51,8 @@ android {
         applicationId "com.fsck.k9.material"
         testApplicationId "com.fsck.k9.tests"
 
-        versionCode 24006
-        versionName '5.207.4'
+        versionCode 24007
+        versionName '5.208'
 
         minSdkVersion 21
         targetSdkVersion 22
@@ -102,6 +102,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_7
         targetCompatibility JavaVersion.VERSION_1_7
     }
+    buildToolsVersion '26.0.2'
 }
 
 if (project.hasProperty('keyAlias')) {
